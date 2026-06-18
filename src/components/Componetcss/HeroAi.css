@@ -1,0 +1,270 @@
+.heroai-container {
+  padding: 4rem 1rem;
+}
+
+
+.heroai-headline {
+font-size: 3rem !important;
+  font-weight: 900 !important;
+   color: #212529;
+  line-height: 1.2;
+}
+
+.heroai-inline-animate {
+  font-weight: 900;
+  color: #fc5c1c;
+  display: inline-block;
+  animation: heroai-fadeInOut 2s ease-in-out;
+  transition: color 0.4s ease;
+}
+
+
+.heroai-subheadline {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+  max-width: 90%;
+  margin-bottom: 2rem;
+  transition: font-size 0.3s ease, line-height 0.3s ease;
+}
+
+.heroai-buttons .heroai-btn-primary,
+.heroai-buttons .heroai-btn-outline {
+  padding: 0.85rem 2.25rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+
+
+.heroai-buttons .heroai-btn-outline {
+  border-color: #212529;
+  color: #212529;
+}
+
+.heroai-buttons .heroai-btn-outline:hover {
+  background-color: #212529;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+
+.heroai-image {
+  max-width: 100%;
+  height: 500px;
+  border-radius: 18px;
+  /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); */
+  transition: transform 0.5s ease;
+}
+
+.heroai-image:hover {
+  transform: scale(1.06);
+}
+
+
+@keyframes heroai-fadeInOut {
+  0% { opacity: 0; transform: translateY(10px); }
+  20% { opacity: 1; transform: translateY(0); }
+  80% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
+
+@media (max-width: 992px) {
+  .heroai-headline {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroai-container {
+    text-align: center;
+  }
+  .heroai-headline {
+    font-size: 2rem;
+  }
+  .heroai-subheadline {
+    font-size: 1.1rem;
+  }
+  .heroai-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .heroai-image {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .heroai-headline {
+    font-size: 1.8rem;
+  }
+  .heroai-subheadline {
+    font-size: 1rem;
+  }
+}
+/* ============================= */
+/* AI/ML Popup Base Styles */
+/* ============================= */
+.ai-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1400;
+  padding: 1rem;
+}
+
+.ai-popup-content {
+  background: #fff;
+  border-radius: 16px;
+  max-width: 700px;
+  width: 100%;
+  padding: 2rem;
+  position: relative;
+  overflow-y: auto;
+  max-height: 90vh;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+  animation: fadeInScale 0.3s ease-in-out;
+}
+
+
+
+.ai-popup-close {
+   position: absolute;
+  top: 14px;
+  right: 14px;
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  transition: transform 0.2s ease;
+}
+.ai-popup-close:hover {
+  transform: scale(1.2);
+  color: #ff6600;
+}
+
+.ai-popup-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color:#fc5c1c;
+}
+
+.ai-popup-sub {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.ai-popup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ai-form-group label {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.ai-form-group input,
+.ai-form-group select,
+.ai-form-group textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease;
+}
+
+.ai-form-group input:focus,
+.ai-form-group select:focus,
+.ai-form-group textarea:focus {
+  border-color: #ff6600;
+  outline: none;
+}
+
+.ai-radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.ai-submit-btn {
+  width: 100%;
+}
+
+/* ============================= */
+/* Responsive Media Queries */
+/* ============================= */
+@media (max-width: 768px) {
+  .ai-popup-content {
+    max-width: 95%;
+    padding: 1.5rem;
+  }
+  .ai-popup-title {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  .ai-popup-sub {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  .ai-radio-group {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .ai-popup-close {
+      top: 10px;
+    right: 10px;
+    font-size: 2rem;    
+    color: #222;
+  }
+}
+
+@media (max-width: 480px) {
+  .ai-popup-content {
+    padding: 1rem;
+    border-radius: 10px;
+  }
+  .ai-popup-title {
+    font-size: 1.1rem;
+  }
+  .ai-popup-sub {
+    font-size: 0.85rem;
+  }
+  .ai-form-group input,
+  .ai-form-group select,
+  .ai-form-group textarea {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+  .ai-submit-btn {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+  .ai-popup-close {
+      top: 8px;
+    right: 8px;
+    font-size: 2rem;   
+    padding: 6px;        
+    border-radius: 50%;
+  }
+  .ai-popup-close:hover {
+    background: #ff6600;
+    color: #fff;
+    transform: scale(1.1);
+  }
+}

@@ -1,0 +1,116 @@
+.ai-section {
+  padding: 2rem 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Tab Styles */
+.ai-tab-title {
+  position: relative;
+  cursor: pointer;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.ai-tab-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #ff6600;
+  transition: width 0.4s ease;
+}
+
+.ai-tab-title:hover::after,
+.ai-tab-title.active::after {
+  width: 100%;
+}
+
+.ai-tab-title.active {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+
+.ai-card {
+  border: none;
+  border-radius: 12px;
+  background: #fff;
+  transition: all 0.3s ease;
+  height: 100%;
+  padding: 1rem;
+}
+
+.ai-card:hover {
+  background: #ff6600;
+  color: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.ai-card-title {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 0.5rem;
+}
+
+.ai-card-text {
+  font-size: 15px;
+  line-height: 1.5;
+}
+.ai-card-text {
+  list-style: none; 
+  padding-left: 0;
+}
+
+.ai-card-text li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+.ai-card-text li::before {
+  content: "\F26E"; 
+  font-family: "bootstrap-icons";
+  position: absolute;
+  left: 0;
+  color: #0d6efd; 
+  font-size: 1rem;
+}
+
+.ai-img {
+  width: 100% !important;
+  max-width: 500px !important;
+  height: 500px !important;
+  object-fit: cover !important;
+  border-radius: 12px !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+
+@media (max-width: 991px) {
+  .ai-img {
+    height: 400px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .ai-tab-titles {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .ai-img {
+    height: 300px !important;
+  }
+
+  /* Cards full width on small screens */
+  .row.g-3 > .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}

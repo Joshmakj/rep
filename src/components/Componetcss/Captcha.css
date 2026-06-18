@@ -1,0 +1,146 @@
+/* ===== Base Styles ===== */
+
+.captcha-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+  flex-wrap: wrap;
+}
+
+.captcha-label {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #333;
+}
+
+.captcha-container input[type="number"] {
+  padding: 6px 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 80px;
+  text-align: center;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.captcha-container input[type="number"]:focus {
+  border-color: rgb(0, 6, 29);
+  box-shadow: 0 0 5px #fc5c1c;
+  outline: none;
+}
+
+/* ===== Button Styles ===== */
+
+.captchabutton {
+  color: #fff;
+  background-color: #fc5c1c;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.captchabutton:hover {
+  background-color: #ff7a33;
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(252, 92, 28, 0.4);
+}
+
+.captchabutton:active {
+  transform: scale(0.95);
+  background-color: #e05217;
+}
+
+/* ===== Responsive Adjustments ===== */
+
+/* ✅ Mobile (≤480px) */
+@media (max-width: 480px) {
+  .captcha-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .captcha-label {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .captcha-container input[type="number"] {
+    width: 100%;
+    max-width: 180px;
+    font-size: 0.95rem;
+  }
+
+  .captchabutton {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px; /* more rectangular instead of perfect circle */
+    background-color: #ff6b2b; /* softer tone for mobile */
+    padding: 0;
+    box-shadow: 0 2px 6px rgba(255, 107, 43, 0.4);
+  }
+
+  .captchabutton svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .captchabutton:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* ✅ Tablet (481px–768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .captcha-container {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .captchabutton {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  .captchabutton svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* ✅ Desktop (≥769px) */
+@media (min-width: 769px) {
+  .captcha-container {
+    gap: 12px;
+  }
+
+  .captchabutton {
+    width: 52px;
+    height: 52px;
+  }
+
+  .captchabutton svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* ✅ Large screens (≥1200px) */
+@media (min-width: 1200px) {
+  .captcha-container {
+    gap: 15px;
+  }
+
+  .captcha-label {
+    font-size: 1.1rem;
+  }
+}

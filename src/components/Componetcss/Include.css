@@ -1,0 +1,115 @@
+.include-marquee {
+  background: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.client-section {
+  margin-top: -100px;
+}
+
+.clients-h5 {
+  font-size: 20px;
+  line-height: 1.7;
+  font-weight: 600;
+  color: #444;
+  text-align: center;
+}
+
+.marquee {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* keeps logos spaced */
+  animation: marquee 25s linear infinite;
+}
+
+.marquee-item {
+  flex: 0 0 auto;
+  width: 180px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+
+.marquee-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.marquee-item:hover img {
+  transform: scale(1.05);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .marquee-track {
+    gap: 15px;
+  }
+  .marquee-item {
+    width: 150px;
+    height: 100px;
+  }
+  .clients-h5 {
+    font-size: 18px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .marquee {
+    padding: 0 20px; /* keeps logos from touching edges */
+  }
+  .marquee-track {
+    gap: 12px;
+  }
+  .marquee-item {
+    width: 130px;
+    height: 90px;
+  }
+  .clients-h5 {
+    font-size: 17px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 576px) {
+  .marquee {
+    padding: 0 15px;
+  }
+  .marquee-track {
+    gap: 10px;
+  }
+  .marquee-item {
+    width: 110px;
+    height: 75px;
+  }
+  .clients-h5 {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+}

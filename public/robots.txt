@@ -1,0 +1,19 @@
+User-agent: *
+# Block sensitive or non-public areas
+Disallow: /admin/
+Disallow: /admin/login
+Disallow: /api/
+Disallow: /static/
+Disallow: /manifest.json
+Disallow: /service-worker.js
+Disallow: /asset-manifest.json
+
+# Allow main public routes
+Allow: /
+Allow: /recruitment
+Allow: /insidesales
+Allow: /it
+Allow: /jobseeker
+
+# Sitemap location
+Sitemap: https://teamupconsultants.com/sitemap.xml

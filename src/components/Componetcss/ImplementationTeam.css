@@ -1,0 +1,86 @@
+.hubspot-team-section {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.hubspot-team-title {
+  font-size: 3rem !important;
+  font-weight: 700;
+  color: #0a2540;
+  margin-bottom: 0.5rem;
+}
+
+.hubspot-team-subtitle {
+  font-size: 1.4rem !important;
+  font-weight: 400;
+  color: #555;
+  margin-bottom: 3rem; 
+}
+
+.hubspot-cards-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.hubspot-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem 2rem;
+  width: 100%;
+  max-width: 400px;
+  min-height: 100px; 
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: flex-start;
+  gap: 1rem; 
+}
+
+.hubspot-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.hubspot-card-icon {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-0 i { color: #fc5c1c; }  
+.icon-1 i { color: #fc5c1c; }  
+.icon-2 i { color: #fc5c1c; } 
+.icon-3 i { color: #fc5c1c; }  
+.icon-4 i { color: #fc5c1c; }  
+.icon-5 i { color: #fc5c1c; }
+
+.hubspot-card p {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .hubspot-cards-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .hubspot-team-title { font-size: 3rem; }
+  .hubspot-team-subtitle { font-size: 1.4rem; }
+}
+
+@media (min-width: 1024px) {
+  .hubspot-cards-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+  .hubspot-team-title { font-size: 3.5rem; }
+  .hubspot-team-subtitle { font-size: 1.6rem; }
+}

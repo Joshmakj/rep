@@ -1,0 +1,148 @@
+.tuc-alert-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2100;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0.75rem 1rem 1rem;
+  background: rgba(16, 24, 40, 0.5);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+.tuc-alert-visible {
+  animation: tucAlertFadeIn 0.18s ease-out;
+}
+
+.tuc-alert-hidden {
+  animation: tucAlertFadeOut 0.18s ease-in forwards;
+}
+
+.tuc-alert-dialog {
+  width: min(92vw, 420px);
+  background: #ffffff;
+  border-radius: 16px;
+  border-top: 5px solid #fc5c1c;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.2);
+  padding: 1.15rem 1.15rem 1rem;
+}
+
+.tuc-alert-title {
+  margin: 0 0 0.45rem;
+  color: #fc5c1c;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.tuc-alert-message {
+  margin: 0;
+  color: #212529;
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+.tuc-alert-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.tuc-alert-button {
+  border: none;
+  border-radius: 999px;
+  background: #fc5c1c;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.45rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.tuc-alert-button:hover {
+  background: #e14e13;
+  transform: translateY(-1px);
+}
+
+.tuc-alert-button:focus-visible {
+  outline: 2px solid rgba(252, 92, 28, 0.35);
+  outline-offset: 2px;
+}
+
+@keyframes tucAlertFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes tucAlertFadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+}
+
+/* Popup scrollbars */
+.popup-content,
+.ai-popup-content,
+.llm-popup-content,
+.recruit-popup-content,
+.job-popup-container,
+.sales-popup-content,
+.sme-form-container {
+  scrollbar-width: thin;
+  scrollbar-color: #fc5c1c #f2f2f2;
+}
+
+.popup-content::-webkit-scrollbar,
+.ai-popup-content::-webkit-scrollbar,
+.llm-popup-content::-webkit-scrollbar,
+.recruit-popup-content::-webkit-scrollbar,
+.job-popup-container::-webkit-scrollbar,
+.sales-popup-content::-webkit-scrollbar,
+.sme-form-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.popup-content::-webkit-scrollbar-track,
+.ai-popup-content::-webkit-scrollbar-track,
+.llm-popup-content::-webkit-scrollbar-track,
+.recruit-popup-content::-webkit-scrollbar-track,
+.job-popup-container::-webkit-scrollbar-track,
+.sales-popup-content::-webkit-scrollbar-track,
+.sme-form-container::-webkit-scrollbar-track {
+  background: #f2f2f2;
+  border-radius: 999px;
+}
+
+.popup-content::-webkit-scrollbar-thumb,
+.ai-popup-content::-webkit-scrollbar-thumb,
+.llm-popup-content::-webkit-scrollbar-thumb,
+.recruit-popup-content::-webkit-scrollbar-thumb,
+.job-popup-container::-webkit-scrollbar-thumb,
+.sales-popup-content::-webkit-scrollbar-thumb,
+.sme-form-container::-webkit-scrollbar-thumb {
+  background: #fc5c1c;
+  border-radius: 999px;
+  border: 2px solid #f2f2f2;
+}
+
+.popup-content::-webkit-scrollbar-thumb:hover,
+.ai-popup-content::-webkit-scrollbar-thumb:hover,
+.llm-popup-content::-webkit-scrollbar-thumb:hover,
+.recruit-popup-content::-webkit-scrollbar-thumb:hover,
+.job-popup-container::-webkit-scrollbar-thumb:hover,
+.sales-popup-content::-webkit-scrollbar-thumb:hover,
+.sme-form-container::-webkit-scrollbar-thumb:hover {
+  background: #e14e13;
+}

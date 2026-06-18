@@ -1,0 +1,381 @@
+/* ============================= */
+/* Comparison Section & Table */
+/* ============================= */
+.comparison-section {
+  padding: 3rem 0;
+}
+
+.comparison-heading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1c2833;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  font-size: 0.95rem;
+}
+
+.comparison-table thead th {
+  background: #fc5c1c;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.comparison-table tbody tr {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.comparison-table tbody tr:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.comparison-table td {
+  padding: 0.75rem;
+  text-align: center;
+  color: #222;
+  font-size: 0.95rem;
+  vertical-align: middle;
+}
+
+.comparison-table td.highlight {
+  background: #f2f6fa;
+  color: #111;
+  font-weight: 500;
+  border-radius: 0 6px 6px 0;
+}
+
+/* Fade-up animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeUp 0.8s ease forwards;
+}
+.fade-up:nth-child(1) { animation-delay: 0.1s; }
+.fade-up:nth-child(2) { animation-delay: 0.2s; }
+.fade-up:nth-child(3) { animation-delay: 0.3s; }
+.fade-up:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive table for mobile */
+@media (max-width: 768px) {
+  .comparison-table thead {
+    display: none; 
+  }
+
+  .comparison-table tbody tr {
+    display: block;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .comparison-table td {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .comparison-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #555;
+    flex: 1;
+    padding-right: 1rem;
+  }
+
+  .comparison-table td.highlight {
+    background: #f2f6fa;
+    border-radius: 0;
+  }
+
+  .comparison-table td:last-child {
+    border-bottom: none;
+  }
+}
+
+/* ============================= */
+/* LLM/API Popup Base Styles */
+/* ============================= */
+.llm-popup-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1500;
+  padding: 1rem;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.llm-popup-content {
+  background: #fff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 680px;
+  padding: 2rem 2.5rem;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 16px 36px rgba(0,0,0,0.2);
+  animation: scaleIn 0.3s ease forwards;
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Close button */
+.llm-popup-close {
+  position: absolute;
+  top: 16px; right: 16px;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.llm-popup-close:hover {
+  transform: scale(1.2);
+  color: #ff6600;
+}
+
+/* Title & subtitle */
+.llm-popup-title {
+ font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color:#fc5c1c;
+
+}
+
+.llm-popup-sub {
+ font-size: 1rem;
+
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+/* ============================= */
+/* Form Styles */
+/* ============================= */
+.llm-popup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.llm-form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.llm-form-group input,
+.llm-form-group select,
+.llm-form-group textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.llm-form-group input:focus,
+.llm-form-group select:focus,
+.llm-form-group textarea:focus {
+  border-color: #ff6600;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255,102,0,0.2);
+}
+
+/* Checkboxes & radio groups */
+.llm-checkbox-group,
+.llm-radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.llm-checkbox-label input,
+.llm-radio-label input {
+  margin-right: 0.5rem;
+}
+
+/* Submit button */
+.llm-submit-btn {
+  background: #ff6600;
+  color: #fff;
+  border-radius: 10px;
+  padding: 14px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.llm-submit-btn:hover {
+  background: orange;
+  color: #fff;
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* ============================= */
+/* Responsive Media Queries 
+/* ============================= */
+
+
+@media (max-width: 768px) {
+  .llm-popup-content {
+    max-width: 95%;
+    padding: 1.5rem 1.8rem;
+  }
+
+  .llm-popup-title {
+    font-size: 1.45rem;
+  }
+
+  .llm-popup-sub {
+    font-size: 0.95rem;
+  }
+
+  /* Checkboxes and radios stacked */
+  .llm-checkbox-group,
+  .llm-radio-group {
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: flex-start;
+  }
+
+  .llm-checkbox-label,
+  .llm-radio-label {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+    font-size: 0.95rem;
+    margin: 0;
+    width: 100%;
+  }
+
+  .llm-popup-close {
+    top: 12px;
+    right: 12px;
+    font-size: 2rem;
+  }
+}
+
+/* Small devices (phones, <=480px) */
+@media (max-width: 480px) {
+  .llm-popup-content {
+    padding: 1rem 1.2rem;
+    border-radius: 12px;
+  }
+
+  .llm-popup-title {
+    font-size: 1.2rem;
+  }
+
+  .llm-popup-sub {
+    font-size: 0.85rem;
+  }
+
+  .llm-form-group input,
+  .llm-form-group select,
+  .llm-form-group textarea {
+    font-size: 0.85rem;
+    padding: 10px;
+  }
+
+  .llm-checkbox-group,
+  .llm-radio-group {
+    gap: 0.6rem;
+  }
+
+  .llm-checkbox-label,
+  .llm-radio-label {
+    font-size: 0.9rem;
+    gap: 0.6rem;
+  }
+
+  .llm-submit-btn {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+
+  .llm-popup-close {
+     top: 8px;
+    right: 8px;
+    font-size: 2rem;   
+    padding: 6px;        
+    border-radius: 50%;
+  }
+
+  .llm-popup-close:hover {
+    transform: scale(1.05);
+    color: #e65c00;
+  }
+}
+
+/* Base styles for checkboxes and radios (normal/default look) */
+.llm-checkbox-group,
+.llm-radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.llm-checkbox-label,
+.llm-radio-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.llm-checkbox-label input[type="checkbox"],
+.llm-radio-label input[type="radio"] {
+  flex-shrink: 0;
+  /* Keep browser default appearance */
+  width: auto;
+  height: auto;
+  margin-right: 0.5rem;
+}

@@ -1,0 +1,187 @@
+.recruitment-expertise {
+  background-color: #f2f6fa;
+  padding: 50px 0;
+}
+
+.counter {
+  font-size: 4rem !important;     
+  font-weight: 800 !important;   
+  color:#fc5c1c !important;          
+  transition: color 0.5s ease-in-out; 
+}
+
+.counter.finished {
+  color:#333 !important;     
+}
+
+
+.recruitment-expertise h2 {
+  font-size: 38px;
+  font-weight: 800 !important;
+  line-height: 1.2;
+  color: #060626;
+  text-align: center;
+}
+
+.recruitment-expertise .highlight {
+  color: #060626;
+  font-weight: 800;
+}
+
+.sub-tittle{
+  font-size: 16px !important;
+  font-weight: 500  !important;
+  color: #5c6269  !important;
+
+}
+.vertical-line {
+  width: 2px;
+  background-color: #000;
+  min-height: 80px;
+}
+
+
+.stats {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.stat-item {
+  text-align: center;
+  min-width: 120px;
+}
+
+.stat-item .number {
+  font-size: 40px;
+  font-weight: 900;
+  color: #060626;
+  display: block;
+}
+
+
+
+.recruitment-expertise .specialization {
+  font-size: 16px;
+  color: #060626;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.recruitment-expertise .highlight-city {
+  font-weight: 700;
+  color: #060626;
+}
+
+@media (max-width: 992px) {
+  .recruitment-expertise h2 {
+    font-size: 32px;
+  }
+
+  .stats {
+    gap: 40px;
+  }
+
+  .vertical-line {
+    min-height: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .vertical-line {
+    display: none;
+  }
+
+  .stat-item .number {
+    font-size: 32px;
+  }
+
+  .stat-item span {
+    font-size: 14px;
+  }
+
+  .recruitment-expertise .specialization {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .recruitment-expertise h2 {
+    font-size: 26px;
+  }
+
+  .stat-item .number {
+    font-size: 26px;
+  }
+
+  .stat-item span {
+    font-size: 12px;
+  }
+}
+
+
+
+.expertise-card {
+  position: relative;
+  text-align: left;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #f5f7fa;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 25px;
+  min-height: 320px; 
+}
+
+.expertise-card:hover {
+  background: #fff !important;
+  transform: scale(1.05);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15);
+}
+
+.expertise-card img {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 90px;   
+  height: 90px;
+  object-fit: contain;
+}
+
+.expertise-card h3 {
+  font-size: 24px;   
+  color: #2c3e50;
+  font-weight: 800;
+  margin-top: 130px; 
+  margin-bottom: 12px;
+}
+
+.expertise-text {
+  font-size: 16px;  
+  color: #444 !important;
+  line-height: 1.8;
+}
+
+.expertise-text :hover {
+  color: #000 !important;
+}
+@media (max-width: 768px) {
+  .expertise-card {
+    min-height: 260px;
+    padding: 20px;
+  }
+  .expertise-card img {
+    width: 70px;
+    height: 70px;
+    top: 15px;
+    left: 15px;
+  }
+  .expertise-card h3 {
+    margin-top: 100px;
+    font-size: 20px;
+  }
+  .expertise-card p {
+    font-size: 14px;
+  }
+}

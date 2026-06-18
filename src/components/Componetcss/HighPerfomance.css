@@ -1,0 +1,105 @@
+
+.solutions-section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.solutions-heading {
+  color: #202124;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+
+.solutions-card {
+  border: none;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+}
+
+.solutions-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.solutions-card-body {
+  padding: 1.5rem;
+}
+
+.solutions-title {
+  color:#000000;
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+
+.solutions-list li {
+  padding: 0.4rem 0;
+  font-size: 1rem;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+
+.solutions-list li::before {
+  content: "•";
+  color: #000000;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0.3rem;
+}
+
+
+@media (max-width: 992px) {
+  .solutions-heading {
+    font-size: 2rem;
+  }
+  .solutions-title {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .solutions-heading {
+    font-size: 1.8rem;
+  }
+  .solutions-title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .solutions-heading {
+    font-size: 1.6rem;
+  }
+  .solutions-card-body {
+    padding: 1rem;
+  }
+}
+/* Target typical laptop screens */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .solutions-section {
+    max-width: 900px; /* smaller container than full width */
+    padding: 0 1rem; /* some side padding */
+  }
+
+  .solutions-heading {
+    font-size: 2rem; /* slightly smaller heading */
+  }
+
+  .solutions-title {
+    font-size: 1.4rem; /* slightly smaller card titles */
+  }
+
+  .solutions-card-body {
+    padding: 1rem; /* reduce card padding */
+  }
+
+  .solutions-list li {
+    font-size: 0.95rem; /* slightly smaller list items */
+  }
+}

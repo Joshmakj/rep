@@ -1,0 +1,269 @@
+/* =========================
+   Collaborative Section
+========================= */
+.collab-wrapper {
+  width: 100%;
+  background: #f5f9ff;
+  padding: 60px 0;
+  margin-bottom: 80px;
+}
+
+.collab-row {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 0;
+}
+
+.collab-image-wrapper {
+  flex: 1;
+  min-width: 320px;
+  max-width: 480px;
+  position: relative;
+}
+
+.collab-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px 0 0 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+.collab-image-new {
+  width: 100%;
+  height: 130%;
+  object-fit: cover;
+  border-radius: 16px 0 0 16px;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+
+.collab-section {
+  flex: 1;
+  min-width: 320px;
+  max-width: 500px;
+  background: #fff;
+  border-radius: 0 16px 16px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.collab-card {
+  background: #fff;
+  border-radius: 0 16px 16px 0;
+  padding: 32px;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.collab-card-body {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.collab-text {
+  font-size: 1.7rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.collab-btn {
+  padding: 12px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  background: #ff5722;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.collab-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Popup Overlay */
+.sme-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 90px 1rem 1rem 1rem;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.sme-form-container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border-top: 6px solid #fc5c1c;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sme-form-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.2s;
+}
+
+.sme-form-close:hover {
+  color: #fc5c1c;
+}
+
+.sme-form-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #fc5c1c;
+}
+
+.sme-form-subtitle {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.sme-form label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.sme-form input {
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+}
+
+.sme-form select {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+}
+
+.sme-submit-btn {
+  background-color: #fc5c1c;
+  color: #fff;
+  padding: 12px 0;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.sme-submit-btn:hover {
+  background-color: #e14a10;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* =========================
+   Responsive Styles
+========================= */
+@media (max-width: 1200px) {
+  .sme-form-container { max-width: 500px; }
+}
+
+@media (max-width: 992px) {
+  .sme-form-container { max-width: 450px; }
+}
+
+@media (max-width: 768px) {
+  .sme-form-overlay {
+    padding: 70px 0.5rem 1rem 0.5rem;
+    align-items: flex-start;
+  }
+  .sme-form-container {
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 1.5rem;
+  }
+  .sme-submit-btn { width: 100%; padding: 12px 0; font-size: 1rem; border-radius: 10px; }
+  .collab-btn { width: 100%; padding: 12px 0; font-size: 1rem; border-radius: 10px; }
+  .sme-form label { width: 100%; }
+}
+
+@media (max-width: 575px) {
+  .sme-form-container { padding: 1rem; }
+  .collab-wrapper { padding: 40px 0; margin-bottom: 40px; }
+  .collab-row { flex-direction: column; max-width: 100%; padding: 0 15px; }
+  .collab-image-wrapper { max-width: 100%; }
+  .collab-section { max-width: 100%; }
+  .collab-image { border-radius: 16px 16px 0 0; }
+  .collab-card { border-radius: 0 0 16px 16px; padding: 20px; }
+  .collab-card::before { font-size: 2rem; }
+  .collab-card::after { font-size: 2rem; }
+  .collab-text { font-size: 1rem; }
+  .collab-btn { font-size: 0.85rem; padding: 10px 20px; }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .collab-row { flex-direction: column; max-width: 90%; }
+  .collab-image-wrapper { max-width: 100%; }
+  .collab-section { max-width: 100%; }
+  .collab-card { padding: 24px; }
+  .collab-text { font-size: 1.2rem; }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .collab-row { flex-wrap: nowrap; max-width: 95%; }
+  .collab-card { padding: 28px; }
+  .collab-text { font-size: 1.4rem; }
+}
+
+@media (min-width: 1200px) {
+  .collab-wrapper { padding: 80px 0; }
+  .collab-card { padding: 40px; }
+  .collab-text { font-size: 1.8rem; }
+  .collab-btn { font-size: 1.1rem; padding: 14px 36px; }
+}

@@ -1,0 +1,310 @@
+ .career-growth-container {
+          max-width: 1200px;
+          background: #fff;
+          border-radius: 12px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+          overflow: hidden;
+          padding: 40px;
+          margin: 40px auto;
+        }
+        .coach-falayn{
+            color: #fc5c1c;
+        }
+        /* Header Section */
+        .career-header-section {
+          text-align: center;
+          margin-bottom: 40px;
+          width: 100%;
+        }
+        
+        .career-main-title {
+          font-size: 2.8rem;
+          font-weight: 700;
+          color: #2d3748;
+          margin-bottom: 15px;
+          line-height: 1.2;
+        }
+        
+        .career-sub-title {
+          font-size: 1.1rem;
+          color: #4a5568;
+          line-height: 1.6;
+          max-width: 800px;
+          margin: 0 auto;
+        }
+        
+        /* Content Wrapper */
+        .career-content-wrapper {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 40px;
+          width: 100%;
+        }
+        
+        /* Left Section */
+        .career-left-section {
+          flex: 1;
+          min-width: 300px;
+        }
+        
+        /* Feature items */
+        .career-feature-item {
+          display: flex;
+          margin-bottom: 30px;
+          align-items: flex-start;
+        }
+        
+        .career-feature-icon {
+          /* background: #ebf4ff; */
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 20px;
+          flex-shrink: 0;
+        }
+        
+        .career-feature-icon i {
+          color: #fc5c1c;
+          font-size: 1.3rem;
+        }
+        
+        .career-feature-content {
+          flex: 1;
+        }
+        
+        .career-feature-title {
+          font-size: 1.2rem;
+          font-weight: 600;
+          color: #2d3748;
+          margin-bottom: 8px;
+        }
+        
+        .career-feature-description {
+          color: #4a5568;
+          line-height: 1.5;
+          font-size: 0.95rem;
+        }
+        
+       
+        .career-right-section {
+          flex: 1;
+          min-width: 300px;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+        }
+        
+       /* Make the card wider */
+.career-coach-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 480px; /* increased width */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.career-coach-feature i {
+  color:rgb(32, 85, 107);; 
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+
+/* 
+        .career-coach-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+         */
+        .career-image-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 25px 25px 15px 25px;
+        }
+        
+        .career-coach-image {
+          width: 200px;
+          height: 200px;
+          object-fit: cover;
+          border-radius: 50%;
+          border: 4px solid #ebf4ff;
+        }
+        
+        .career-coach-content {
+          padding: 25px;
+        }
+        
+        .career-coach-name {
+          font-size: 1.4rem;
+          font-weight: 700;
+          color: #2d3748;
+          margin-bottom: 8px;
+          text-align: center;
+        }
+        
+        .career-coach-title {
+          color: #0a243a;
+          font-weight: 500;
+          margin-bottom: 20px;
+          text-align: center;
+          font-size: 0.95rem;
+        }
+        
+        .career-coach-feature {
+          display: flex;
+          align-items: center;
+          margin-bottom: 12px;
+        }
+        
+      
+       
+        .career-coach-button {
+          display: block;
+          width: 100%;
+          background: #fc5c1c;
+          color: white;
+          border: none;
+          padding: 14px;
+          border-radius: 6px;
+          font-size: 1.2rem;
+          font-weight: 600;
+          cursor: pointer;
+          margin-top: 25px;
+        
+        }
+        
+        .career-coach-button:hover {
+          background:orange;
+        }
+        
+        /* Responsive Design */
+        /* Large devices (desktops, less than 1200px) */
+        @media (max-width: 1199.98px) {
+          .career-growth-container {
+            max-width: 960px;
+          }
+        }
+        
+        /* Medium devices (tablets, less than 992px) */
+        @media (max-width: 991.98px) {
+          .career-growth-container {
+            max-width: 720px;
+            padding: 30px;
+          }
+          
+          .career-content-wrapper {
+            gap: 30px;
+          }
+          
+          .career-main-title {
+            font-size: 2.4rem;
+          }
+        }
+        
+        /* Small devices (landscape phones, less than 768px) */
+        @media (max-width: 767.98px) {
+          .career-growth-container {
+            padding: 25px 20px;
+            margin: 30px auto;
+          }
+          
+          .career-main-title {
+            font-size: 2rem;
+          }
+          
+          .career-sub-title {
+            font-size: 1rem;
+          }
+          
+          .career-content-wrapper {
+            flex-direction: column;
+          }
+          
+          .career-left-section {
+            order: 2;
+          }
+          
+          .career-right-section {
+            order: 1;
+            margin-bottom: 20px;
+          }
+          
+          .career-feature-item {
+            flex-direction: column;
+            text-align: center;
+            margin-bottom: 25px;
+          }
+          
+          .career-feature-icon {
+            margin-right: 0;
+            margin-bottom: 15px;
+            align-self: center;
+          }
+          
+          .career-coach-image {
+            width: 180px;
+            height: 180px;
+          }
+        }
+        
+        /* Extra small devices (portrait phones, less than 576px) */
+        @media (max-width: 575.98px) {
+          .career-main-title {
+            font-size: 1.8rem;
+          }
+          
+          .career-sub-title {
+            font-size: 0.95rem;
+          }
+          
+          .career-feature-title {
+            font-size: 1.1rem;
+          }
+          
+          .career-feature-description {
+            font-size: 0.9rem;
+          }
+          
+          .career-coach-name {
+            font-size: 1.2rem;
+          }
+          
+          .career-coach-title {
+            font-size: 0.9rem;
+          }
+          
+          .career-coach-feature {
+            font-size: 0.9rem;
+          }
+          
+          .career-coach-image {
+            width: 150px;
+            height: 150px;
+          }
+        }
+        
+        /* Very small devices (less than 400px) */
+        @media (max-width: 399.98px) {
+          .career-main-title {
+            font-size: 1.6rem;
+          }
+          
+          .career-feature-icon {
+            width: 45px;
+            height: 45px;
+          }
+          
+          .career-feature-icon i {
+            font-size: 1.1rem;
+          }
+          
+          .career-coach-image {
+            width: 130px;
+            height: 130px;
+          }}

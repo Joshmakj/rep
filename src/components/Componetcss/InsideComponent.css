@@ -1,0 +1,171 @@
+/* Container */
+.plan-container {
+  padding: 40px 20px;
+}
+
+/* Left Section */
+.plan-title {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 12px;
+  color: #0c0c2e;
+}
+
+.plan-description {
+  font-size: 1.15rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Stepper */
+.plan-stepper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.plan-step-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.plan-line {
+  width: 3px;
+  height: 40px;
+  background-color: #ddd;
+  transition: background-color 0.3s ease;
+}
+
+.plan-line-active {
+  background-color: #fc5c1c;
+}
+
+/* Buttons */
+.plan-btn {
+  padding: 0.6rem 1.2rem;
+  min-width: 120px;
+  border-radius: 25px;
+  border: 2px solid #ddd;
+  background-color: #fff;
+  font-weight: 600;
+  color: #fc5c1c;
+  transition: all 0.3s ease;
+}
+
+.plan-btn:hover {
+  background-color: #fc5c1c;
+  color: #fff;
+  border-color: #fc5c1c;
+}
+
+.plan-btn-active {
+  background-color: #fc5c1c !important;
+  color: #fff !important;
+  border-color: #cc7000 !important;
+  box-shadow: 0 0 15px rgba(252, 92, 28, 0.6);
+}
+
+.animate-btn {
+  animation: glowPulse 0.6s ease-in-out;
+}
+
+@keyframes glowPulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 #fc5c1c; }
+  50% { transform: scale(1.05); box-shadow: 0 0 20px #fc5c1c; }
+  100% { transform: scale(1); box-shadow: 0 0 12px #fc5c1c; }
+}
+
+/* Content Box */
+.plan-content-box {
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.plan-card {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.plan-card:hover {
+  background-color: #f9fbfd;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fc5c1c;
+  margin-bottom: 12px;
+}
+
+.card-list {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.card-list li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* -------------------- RESPONSIVE -------------------- */
+@media (max-width: 991px) {
+  .plan-right {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .plan-stepper {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .plan-line {
+    width: 40px;
+    height: 3px;
+  }
+
+  .plan-content-box {
+    margin-top: 20px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 576px) {
+  .plan-title { font-size: 1.6rem; }
+  .plan-description { font-size: 1rem; }
+
+  .plan-stepper {
+    flex-direction: column;
+  }
+
+  .plan-btn {
+    width: 100%;
+    max-width: 220px;
+    font-size: 0.9rem;
+  }
+
+  .plan-line {
+    width: 3px;
+    height: 30px;
+  }
+
+  .plan-card { padding: 16px; }
+  .card-title { font-size: 1.1rem; }
+  .card-list li { font-size: 0.9rem; }
+}

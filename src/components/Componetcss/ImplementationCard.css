@@ -1,0 +1,233 @@
+.implementation-title {
+  font-size: 1.8rem; /* Slightly reduced base font size */
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 40px;
+}
+
+.implementation-card {
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100%;
+}
+
+.implementation-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px  #f2f6fa;
+}
+
+.implementation-card .card-title {
+  font-size: 1.25rem; /* Reduced base font size */
+  font-weight: 700;
+  color: #fc5c1c;
+  margin-bottom: 18px;
+  line-height: 1.4;
+}
+
+.card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card-list li {
+  font-size: 0.9rem; /* Reduced base font size */
+  margin-bottom: 12px;
+  padding-left: 26px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.card-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #fc5c1c;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* Large Desktop (min-width: 1201px) */
+@media (min-width: 1201px) {
+  .implementation-title {
+    font-size: 2.2rem;
+  }
+  .implementation-card .card-title {
+    font-size: 1.4rem;
+  }
+  .card-list li {
+    font-size: 0.95rem;
+  }
+}
+
+/* Large Screens (max-width: 1200px) */
+@media (max-width: 1200px) {
+  .implementation-card {
+    padding: 20px;
+  }
+  .implementation-card .card-title {
+    font-size: 1.2rem;
+  }
+  .card-list li {
+    font-size: 0.88rem;
+    padding-left: 24px;
+  }
+  .card-list li::before {
+    font-size: 0.85rem;
+  }
+}
+
+/* Tablets (max-width: 992px) */
+@media (max-width: 992px) {
+  .implementation-title {
+    font-size: 1.6rem; /* Further reduction */
+  }
+  .implementation-card {
+    padding: 18px;
+    border-radius: 14px; /* Slightly smaller radius */
+  }
+  .implementation-card .card-title {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+  }
+  .card-list li {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    padding-left: 22px;
+  }
+  .card-list li::before {
+    font-size: 0.8rem;
+  }
+}
+
+/* Small Tablets / Large Phones (max-width: 768px) */
+@media (max-width: 768px) {
+  .implementation-title {
+    font-size: 1.5rem; /* Further reduction */
+    margin-bottom: 30px;
+  }
+  .implementation-card {
+    margin-bottom: 20px;
+    padding: 16px;
+    min-height: auto; /* Allow natural height on smaller screens */
+  }
+  .implementation-card:hover {
+    transform: translateY(-4px); /* Reduced hover effect for touch devices */
+  }
+  .implementation-card .card-title {
+    font-size: 1.05rem;
+    line-height: 1.3;
+  }
+  .card-list li {
+    font-size: 0.82rem;
+    padding-left: 20px;
+    line-height: 1.5;
+  }
+  .card-list li::before {
+    font-size: 0.75rem;
+  }
+}
+
+/* Mobile Phones (max-width: 576px) */
+@media (max-width: 576px) {
+  .implementation-title {
+    font-size: 1.3rem; /* Further reduction */
+    margin-bottom: 25px;
+  }
+  .implementation-card {
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); /* Lighter shadow */
+  }
+  .implementation-card .card-title {
+    font-size: 1rem;
+    margin-bottom: 14px;
+  }
+  .card-list li {
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+    padding-left: 20px;
+  }
+  .card-list li::before {
+    font-size: 0.7rem;
+  }
+}
+
+/* Extra Small Screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .implementation-title {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  .implementation-card {
+    padding: 12px;
+    margin-bottom: 16px;
+  }
+  .implementation-card .card-title {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+  }
+  .card-list li {
+    font-size: 0.78rem;
+    padding-left: 18px;
+    line-height: 1.4;
+    margin-bottom: 6px;
+  }
+  .card-list li::before {
+    font-size: 0.65rem;
+  }
+}
+
+/* Very Small Screens (max-width: 320px) */
+@media (max-width: 320px) {
+  .implementation-title {
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+  }
+  .implementation-card {
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .implementation-card .card-title {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+  .card-list li {
+    font-size: 0.75rem;
+    padding-left: 16px;
+    margin-bottom: 5px;
+  }
+  .card-list li::before {
+    font-size: 0.6rem;
+  }
+}
+
+/* Landscape Orientation Adjustment */
+@media (max-height: 500px) and (orientation: landscape) {
+  .implementation-title {
+    margin-bottom: 20px;
+  }
+  .implementation-card {
+    padding: 12px;
+    min-height: auto;
+  }
+  .card-list li {
+    margin-bottom: 8px;
+  }
+}
+
+/* Reduced Motion for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .implementation-card {
+    transition: none;
+  }
+  .implementation-card:hover {
+    transform: none;
+  }
+}

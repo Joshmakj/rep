@@ -1,0 +1,197 @@
+/* ====== Job Banner Section ====== */
+.jobanner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 5rem 1rem;
+  box-sizing: border-box;
+}
+
+/* ====== Layout ====== */
+.jobanner .row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem; /* consistent space between image and content */
+  flex-wrap: wrap;
+}
+
+
+.jobanner .col-md-5 {
+  display: flex;
+  justify-content: center;
+}
+
+.jobanner-image {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.jobanner-image:hover {
+  transform: scale(1.03);
+}
+
+/* ====== Content ====== */
+.jobanner-content {
+  flex: 1;
+  padding: 1rem;
+}
+
+.jobanner-heading {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #212529;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.jobanner-highlight-broken,
+.jobanner-highlight-better {
+  color: #fc5c1c;
+}
+
+.jobanner-subheading {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* ====== List ====== */
+.jobanner-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+
+.jobanner-list li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.jobanner-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  background-color: #20556b;
+  border-radius: 50%;
+}
+
+.jobanner-list li::after {
+  content: "✓";
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.jobanner-lis {
+  color: #fc5c1c;
+  font-weight: 500;
+}
+
+/* ====== Button ====== */
+.jobanner-btn {
+  background-color: #fc5c1c;
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 0.7rem 1.6rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color 0.3s ease-in-out;
+  border: none;
+  cursor: pointer;
+}
+
+.jobanner-btn:hover {
+  background-color: orange;
+   color: #fff;
+}
+
+/* ====== Responsive Breakpoints ====== */
+
+/* Large screens */
+@media (min-width: 1200px) {
+  .jobanner .row {
+    gap: 4rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .jobanner {
+    padding: 4rem 1rem;
+  }
+  .jobanner .row {
+    gap: 2.5rem;
+  }
+  .jobanner-heading {
+    font-size: 2.4rem;
+  }
+  .jobanner-subheading {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .jobanner {
+    padding: 2.5rem 1rem;
+  }
+
+  .jobanner .row {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .jobanner-image {
+    width: 90%;
+    max-width: none;
+  }
+
+  .jobanner-heading {
+    font-size: 1.9rem;
+  }
+
+  .jobanner-subheading {
+    font-size: 1rem;
+  }
+
+  .jobanner-list li {
+    font-size: 0.9rem;
+  }
+
+  .jobanner-btn {
+    margin: 1rem auto 0;
+  }
+}
+
+/* Extra Small */
+@media (max-width: 480px) {
+  .jobanner-heading {
+    font-size: 1.5rem;
+  }
+  .jobanner-subheading {
+    font-size: 0.95rem;
+  }
+  .jobanner .row {
+    gap: 1.5rem;
+  }
+}
