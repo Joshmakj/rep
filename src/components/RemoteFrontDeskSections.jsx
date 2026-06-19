@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { Link } from "react-router-dom";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../components/Componetcss/RemoteFrontDeskSections.css";
@@ -9,6 +9,8 @@ import demoVideo from "../assets/HomeAssets/demovideo.mp4";
 import frontDeskVisual from "../assets/RemoteAssets/FrontDesk.png";
 import testimonialPortrait from "../assets/JobseekerAssets/Jobpro.png";
 import whatweofferImage from "../assets/HomeAssets/whatweoffer.png";
+import blog1Image from "../assets/HomeAssets/blog1.png";
+import blog2Image from "../assets/HomeAssets/blog2.png";
 
 const features = [
   {
@@ -67,14 +69,6 @@ const compareRows = [
   ["No hardware/setup cost", "check", "check", "x"],
   ["Scalable to multi-site", "check", "x", "warn"],
   ["Visitor logging & reports", "check", "warn", "check"],
-];
-
-const demoSteps = [
-  "Visitor arrives at kiosk",
-  "Live video connection",
-  "Visitor identity confirmed",
-  "Host notified instantly",
-  "Visitor escorted to destination",
 ];
 
 const whyChooseCards = [
@@ -198,10 +192,11 @@ const RemoteFrontDeskSections = () => {
   }, []);
 
   const currentTestimonial = testimonials[activeTestimonialIndex];
+  const sectionStyle = (index) => ({ "--rfd-section-delay": `${index * 120}ms` });
 
   return (
     <>
-      <section className="rfd-next rfd-next--split">
+      <section className="rfd-next rfd-next--split rfd-section" style={sectionStyle(0)}>
         <div className="container rfd-next__container">
           <div className="row align-items-center g-5">
             <div className="col-lg-6">
@@ -255,7 +250,7 @@ const RemoteFrontDeskSections = () => {
         </div>
       </section>
 
-      <section className="rfd-process">
+      <section className="rfd-process rfd-section" style={sectionStyle(1)}>
         <div className="container">
           <div className="rfd-process__header">
             <div className="rfd-eyebrow rfd-eyebrow--center">
@@ -284,93 +279,60 @@ const RemoteFrontDeskSections = () => {
         </div>
       </section>
 
-      <section className="rfd-demo">
+      <section className="rfd-demo rfd-section" style={sectionStyle(2)}>
         <div className="container">
-          <div className="rfd-demo__card">
-            <div className="rfd-demo__panel">
-            <div className="row align-items-center g-4 g-xl-5">
-              <div className="col-lg-5">
-                <div className="rfd-eyebrow">
-                  <i className="bi bi-camera-video" aria-hidden="true" />
-                  <span>DEMO VIDEO</span>
-                </div>
-                <h2 className="rfd-demo__title">
-                  Watch the visitor
-                  <br />
-                  journey
-                </h2>
-                <p className="rfd-demo__lead">
-                  See how a visitor is greeted, connected, verified, and guided
-                  from the first tap to the final handoff.
-                </p>
+          <div className="row align-items-center g-4 g-xl-5 rfd-demo__grid rfd-demo__shell">
+            <div className="col-lg-5 rfd-demo__copy">
+              <div className="rfd-eyebrow">
+                <i className="bi bi-camera-video" aria-hidden="true" />
+                <span>DEMO VIDEO</span>
+              </div>
+              <h2 className="rfd-demo__title">Watch the visitors journey</h2>
+              <p className="rfd-demo__lead">
+                See how a visitor is greeted, connected, verified, and guided
+                from the first tap to the final handoff.
+              </p>
+              <button
+                type="button"
+                className="rfd-cta"
+                onClick={() => setShowDemoVideo(true)}
+              >
+                Watch Demo
+                <i className="bi bi-play-circle" aria-hidden="true" />
+              </button>
+            </div>
+
+            <div className={`col-lg-7 rfd-demo__visual-col ${showDemoVideo ? "is-video-open" : ""}`}>
+              <img
+                src={demoImage}
+                alt="Demo preview"
+                className="rfd-demo__screen-image"
+              />
+              <div className="rfd-demo__video-wrap" aria-hidden={!showDemoVideo}>
                 <button
                   type="button"
-                  className="rfd-cta"
-                  onClick={() => setShowDemoVideo(true)}
+                  className="rfd-demo__video-close"
+                  onClick={() => setShowDemoVideo(false)}
+                  aria-label="Close demo"
                 >
-                  Watch Demo
-                  <i className="bi bi-play-circle" aria-hidden="true" />
+                  <i className="bi bi-x-lg" />
                 </button>
+                <video controlsList="nodownload" disablePictureInPicture onContextMenu={(event) => event.preventDefault()}
+                  controls
+                  autoPlay
+                  playsInline
+                  className="rfd-demo__screen-video"
+                >
+                  <source src={demoVideo} type="video/mp4" />
+                  Your browser does not support HTML video.
+                </video>
               </div>
-
-              <div className="col-lg-7">
-                <div className="rfd-demo__visual">
-                  <div className="rfd-demo__list">
-                    {demoSteps.map((step, index) => (
-                      <div className="rfd-demo__list-item" key={step}>
-                        <span className={`rfd-demo__bullet ${index === 0 ? "is-active" : ""}`} />
-                        <div>
-                          <strong>{step}</strong>
-                          <span>
-                            {index === 0 && "Front door / kiosk"}
-                            {index === 1 && "Live video call"}
-                            {index === 2 && "Identity confirmed"}
-                            {index === 3 && "Notified host"}
-                            {index === 4 && "Visitor guided"}
-                          </span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="rfd-demo__screen">
-                    {showDemoVideo ? (
-                      <div className="rfd-demo__video-wrap">
-                        <button
-                          type="button"
-                          className="rfd-demo__video-close"
-                          onClick={() => setShowDemoVideo(false)}
-                          aria-label="Close demo"
-                        >
-                          <i className="bi bi-x-lg" />
-                        </button>
-                        <video
-                          controls
-                          autoPlay
-                          playsInline
-                          className="rfd-demo__screen-video"
-                        >
-                          <source src={demoVideo} type="video/mp4" />
-                          Your browser does not support HTML video.
-                        </video>
-                      </div>
-                    ) : (
-                      <img
-                        src={demoImage}
-                        alt="Demo preview"
-                        className="rfd-demo__screen-image"
-                      />
-                    )}
-                  </div>
-                </div>
-              </div>
-            </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="rfd-why">
+      <section className="rfd-why rfd-section" style={sectionStyle(3)}>
         <div className="container">
           <div className="rfd-process__header">
             <div className="rfd-eyebrow rfd-eyebrow--center">
@@ -404,7 +366,7 @@ const RemoteFrontDeskSections = () => {
         </div>
       </section>
 
-      <section className="rfd-compare">
+      <section className="rfd-compare rfd-section" style={sectionStyle(4)}>
         <div className="container">
           <div className="rfd-process__header">
             <h2 className="rfd-process__title">How We Compare</h2>
@@ -490,7 +452,7 @@ const RemoteFrontDeskSections = () => {
         </div>
       </section>
 
-      <section className="rfd-testimonial">
+      <section className="rfd-testimonial rfd-section" style={sectionStyle(5)}>
         <div className="container">
           <div className="rfd-process__header">
             <div className="rfd-eyebrow rfd-eyebrow--center">
@@ -529,7 +491,7 @@ const RemoteFrontDeskSections = () => {
         </div>
       </section>
 
-      <section className="rfd-faq">
+      <section className="rfd-faq rfd-section" style={sectionStyle(6)}>
         <div className="container">
           <div className="rfd-process__header">
             <div className="rfd-eyebrow rfd-eyebrow--center">
@@ -574,7 +536,7 @@ const RemoteFrontDeskSections = () => {
         </div>
       </section>
 
-      <section className="rfd-resources">
+      <section className="rfd-resources rfd-section" style={sectionStyle(7)}>
         <div className="container">
           <div className="rfd-process__header">
             <div className="rfd-eyebrow rfd-eyebrow--center">
@@ -588,7 +550,7 @@ const RemoteFrontDeskSections = () => {
           </div>
 
           <div className="rfd-resources__grid">
-            {resourceCards.map((card) => (
+            {resourceCards.map((card, index) => (
               <article className={`rfd-resource-card rfd-resource-card--${card.kind}`} key={card.title}>
                 <div className="rfd-resource-card__content">
                   <span className="rfd-resource-card__tag">{card.tag}</span>
@@ -603,7 +565,7 @@ const RemoteFrontDeskSections = () => {
                 </div>
                 <div className="rfd-resource-card__image-wrap">
                   <img
-                    src={card.kind === "guide" ? whatweofferImage : heroImage}
+                    src={index === 0 ? blog1Image : index === 1 ? blog2Image : card.kind === "guide" ? whatweofferImage : heroImage}
                     alt={card.imageAlt}
                     className={`rfd-resource-card__image rfd-resource-card__image--${card.kind}`}
                   />
